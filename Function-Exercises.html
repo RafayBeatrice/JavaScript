@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Function</title>
+</head>
+<body>
+
+<script>
+    /*
+function great(name){
+   console.log(`Hello ${name}!`);
+   if(!name ){
+    console.log('Hello there!');
+}
+}
+//undefined : true
+//if(!name ){
+ //   console.log('Hello there!');
+//}
+great();
+*/
+
+//let convertTemperature = '';
+function convertToFahrenheit(Celsius){
+    return((Celsius * 9 / 5) + 32);
+}
+//convertToFahrenheit(25);
+
+function convertToCelsius(Fahrenheit){
+    return((Fahrenheit - 32 ) * 5 / 9);
+}
+//convertToCelsius(86);
+
+
+function convertTemperature(degress, unit) {
+    if(unit === 'C') {
+        const result = convertToFahrenheit(degress);
+        return `${result} F`;
+    } else if ( unit === 'F') {
+        const result = convertToCelsius(degress);
+        return `${result} C`;
+    }
+}
+
+console.log(convertTemperature(25, 'C'));
+console.log(convertTemperature(86, 'F'));
+
+
+</script>
+</body>
+</html>
